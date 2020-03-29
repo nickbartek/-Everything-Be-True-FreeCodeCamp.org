@@ -1,0 +1,23 @@
+function truthCheck(collection, pre) {
+let arr=[]
+ 
+let d= Object.entries(collection)
+let help=d[0][1][pre]
+  for(let i=0; i<collection.length; i++){
+
+arr.push(d[i][1][pre])
+//console.log(collection[i],a)
+//console.log(d[i][1][pre])
+let help=d[i][1][pre]
+//console.log(help,"pre",arr)
+  }
+  //console.log(arr.every(x=>x===help))
+  if(arr.every(x=>x))return true
+else return false//=>x===help)
+
+  //return pre;
+}
+
+truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex");/**/
+//
+truthCheck([{"user":"thinky-Winky","sex":"male","age":4},{"user":"Dipsy","sex":"male","age":5},{"user":"bart","sex":"male","age":34},{"age":"99"},{1:"kl",9:0,"pi":"3,14",0:0,"age":980}],"age")
